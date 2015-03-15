@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Balaram Parajuli</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <table>
+      <tr>
+        <td><%= link_to 'Home', root_path %></td>
+        <td><%= link_to 'Posts', posts_path %></td>
+        <td><%= link_to 'About Me', about_page_path %></td>
+      </tr>
+    </table>
+  </nav>
+<%= yield %>
+
+</body>
+</html>
