@@ -32,7 +32,7 @@
       padding: 10px;
       border-radius: 20px;
       margin-top: 5px;
-      height: 140px;;
+      height: 171px;;
       p{
         text-align: left;
       }
@@ -53,10 +53,103 @@
   #top_right{
     width: 860px;
     background-color: white;
-    height: 518px;
+    height: 621px;
     margin-top: 20px;
     margin-right: 10px;
     float: right;
     display: inline-block;
+    .rslides {
+      position: relative;
+      list-style: none;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rslides li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .rslides li:first-child {
+      position: relative;
+      display: block;
+      float: left;
+    }
+
+    .rslides img {
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0;
+    }
+    #home_slide_show
+    {
+    	height:500px;
+    	width:860px;
+    	background-color:rgb(200, 200, 200);
+    	margin:auto;
+    	margin-top:10px;
+    }
+    #home_slide_show img
+    {
+    	width:100%;
+    	height:100%;
+    	cursor:pointer;
+    	margin-left:-19px;
+    }
+    #home_slide_show li
+    {
+    	list-style-type:none;
+    	background-color:gray;
+    	width:235px;
+    	display:inline-block;
+    	height:50px;
+    	color:rgb(139, 0, 0);
+    	font-size:15px;
+    	margin-top:-16px;
+    	text-align:center;
+    	line-height:50px;
+    	text-decoration:none;
+    }
+    .rslides_nav
+    {
+    	z-index:0;
+    	background-color:rgb(150, 150, 150);
+    	height:60px;
+    	line-height:60px;
+    	text-align:center;
+    	text-decoration:none;
+    	color:rgb(139, 0, 0);
+    	margin-top:-47px;
+    	width:115px;
+    }
+    .next
+    {
+    	float:right;
+    }
+    .prev
+    {
+    	float:left;
+    }
+    .rslides_nav:hover
+    {
+    	background-color:white;
+    }
+    .rslides_here
+    {
+    	background-color:rgb(150, 150, 150);
+    }
+    #home_slide_show h1
+    {
+    	text-align:center;
+    	color:rgb(139, 0, 0);
+    }
   }
 }

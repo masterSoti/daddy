@@ -18,7 +18,11 @@ html{
 }
 body{
   background: url(background.png) center center fixed;
-  margin: 0 0;
+	min-width:100%;
+	min-height:100%;
+	margin: 0 auto;
+	position:relative;
+	padding-bottom:315px;
 }
 img{
   width: 100%;
@@ -57,8 +61,15 @@ nav table td:hover{
   border-bottom: 3px solid white;
 }
 footer{
-  background-color: red;
-  height: 300px;
-  width:100%;
-  margin-top: 15px;
+
+	height:300px;
+	width:100%;
+	background-color:rgb(81, 145, 87);
+	color:white;
+	text-align:center;
+	padding-top:5px;
+	position:absolute;
+	bottom:0;
+	left:0;
+
 }
