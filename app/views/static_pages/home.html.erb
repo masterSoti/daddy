@@ -6,9 +6,9 @@
   </div>
   <div id="top_left">
     <div class="header section_header">
-      Recent Posts
+      <%= link_to 'Recent Posts', Post %>
     </div>
-    <% @posts.last(5).each do |post| %>
+    <% @posts.last(3).each do |post| %>
       <div id="indivisual">
         <div id="title">
           <h1><%= link_to post.title, post %></h1>
@@ -18,5 +18,10 @@
         </div>
       </div>
     <%end%>
+  </div>
+  <div id="top_right">
+    <div class="header section_header">
+      Slide Show
+    </div>
   </div>
 </div>
