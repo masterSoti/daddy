@@ -2,13 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #home_container{
-  #header{
+  #home_header{
+    background-color: lightgrey;
+    height: 348px;
     h1{
       color: white;
       margin-top: -200px;
       font-size: 8em;
       text-align: left;
       margin-left: 50px;
+    }
+  }
+  #top_left{
+    width: 400px;
+    background-color: white;
+    //height: 600px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    display: inline-block;
+    .section_header{
+      height: 34px;
+      font-size: 24px;
+      line-height: 30px;
+      color: white;
+    }
+    #indivisual{
+      background-color:rgb(56, 224, 231);
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 5px;
+      height: 140;
+      p{
+        text-align: left;
+      }
+      #body{
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+      h1{
+        font-size: 2em;
+        text-align: left;
+        &:hover{
+          color: rgb(0, 71, 255);
+        }
+      }
     }
   }
 }

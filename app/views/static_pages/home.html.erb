@@ -1,7 +1,22 @@
 <div id="home_container" class = "wrapper">
-  <div id="header" class="header">
+  <div id="home_header" class="header">
     <div id="date">Some date</div>
     <%= image_tag("cubes.jpg")%>
     <h1>Balaram Parajuli</h1>
+  </div>
+  <div id="top_left">
+    <div class="header section_header">
+      Recent Posts
+    </div>
+    <% @posts.last(5).each do |post| %>
+      <div id="indivisual">
+        <div id="title">
+          <h1><%= link_to post.title, post %></h1>
+        </div>
+        <div id="body">
+          <p><%= post.body.first(200) %>...<%= link_to "read more", post %></p>
+        </div>
+      </div>
+    <%end%>
   </div>
 </div>
