@@ -1,2 +1,11 @@
-<div id="about_container" class="wrapper">
+<div id="about_container" class="wrapper" style="text-align:center">
+    <% post = Post.find_by(id:1) %>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+        <% if logged_in? %>
+          <div id="admin">
+            <div class="admin-uses"><%= link_to 'Edit', edit_post_path(post) %></div>
+            <div class="admin-uses"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
+        <% end %>
 </div>

@@ -13,7 +13,11 @@
         <td><%= link_to 'Home', root_path %></td>
         <td><%= link_to 'Posts', posts_path %></td>
         <td><%= link_to 'About Me', about_page_path %></td>
-        <td><%= link_to 'New Post', new_post_path %></td>
+        <% if logged_in? %>
+          <td><%= link_to 'New Post', new_post_path %></td>
+          <td><%= link_to current_user.name, current_user %></td>
+          <td><%= link_to 'Log out', logout_path %></td>
+        <% end %>
       </tr>
     </table>
   </nav>

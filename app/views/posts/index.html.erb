@@ -9,10 +9,12 @@
         <div id="body">
           <p><%= post.body.first(200) %>...<%= link_to "read more", post %></p>
         </div>
-        <div id="admin">
-          <div class="admin-uses"><%= link_to 'Edit', edit_post_path(post) %></div>
-          <div class="admin-uses"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </div>
+        <% if logged_in? %>
+          <div id="admin">
+            <div class="admin-uses"><%= link_to 'Edit', edit_post_path(post) %></div>
+            <div class="admin-uses"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
+        <% end %>
       </div>
     <%end%>
   <%#else%>

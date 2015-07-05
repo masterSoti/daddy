@@ -1,6 +1,10 @@
 <div id="home_container" class = "wrapper">
   <div id="home_header" class="header">
-    <div id="date">Some date</div>
+    <div id="date">
+      <script>
+        document.getElementById("date").innerHTML = Date();
+      </script>
+    </div>
     <%= image_tag("cubes.jpg")%>
     <h1>Balaram Parajuli</h1>
   </div>
@@ -15,6 +19,9 @@
         </div>
         <div id="body">
           <p><%= post.body.first(200) %>...<%= link_to "read more", post %></p>
+          <span title=<%= post.updated_at.localtime.asctime.split.join('-') %>>
+           Last Updated: <%= distance_of_time_in_words_to_now(post.updated_at) %> ago
+          </span>
         </div>
       </div>
     <%end%>
@@ -24,12 +31,7 @@
       Slide Show
     </div>
     <div id="home_slide_show">
-      <ul class="rslides">
-          <ul><img src="cubes.jpg" id="home_img-pants" alt=""><div id="home_fade_in"><h1>Pants, Jeans, and Everything</h1></div></ul>
-          <ul><img src="cubes.jpg" id="home_img-shirts" alt=""><div id="home_fade_in"><h1>Shirts, T-shirts, and Everything</h1></div></ul>
-          <ul><img src="cubes.jpg" id="home_img-accessories" alt=""><div id="home_fade_in"><h1>Hats, Jewlery, and Glasses</h1></div></ul>
-          <ul><img src="cubes.jpg" id="home_img-suits" alt=""><div id="home_fade_in"><h1>Suits Of All kinds</h1></div></ul>
-      </ul>
+
     </div>
   </div>
 </div>
